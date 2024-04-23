@@ -12,23 +12,6 @@ Activate the conda environment:
 conda activate annotation
 ```
 
-<img src="../images/warn.png" width="25" /> WARNING: If you are using a Mac, the Conda version of prokka is too buggy for us to use. Instead, use the following commands to install prokka:
-
-If you have [HomeBrew](../part_1/1A_computer_preparation.md#step-3---mac-only-install-xcode-command-line-tools-and-homebrew) installed: 
-
-```Shell
-brew install brewsci/bio/prokka
-sudo cpan install Bio::SearchIO::hmmer
-```
-
-If you don't have HomeBrew:
-
-```Shell
-sudo cpan Time::Piece XML::Simple Digest::MD5 Bio::Perl Bio::SearchIO::hmmer
-git clone https://github.com/tseemann/prokka.git $HOME/prokka
-$HOME/prokka/bin/prokka --setupdb
-```
-
 ## Section 1 - Genome annotation using prokka
 
 Genome annotation is the process of determining the key features of the genome. This usually incldes identifying gene sequences, but can also include other features such as RNA encoding regions, signal peptides or other important features. The process of annotation is a bit different whether you are working with eukaryotes, prokaryotes, or viruses, but there are a number of programs and applications available to help you with this. 

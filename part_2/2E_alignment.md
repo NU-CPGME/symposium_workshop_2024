@@ -17,31 +17,6 @@ In this section we're going to perform reference-based alignments using the sequ
 
 We'll start with alignment of the _S. pyogenes_ reads against the reference genome. [Snippy](https://github.com/tseemann/snippy) is a nice "all-in-one" pipeline for generating alignments and using those alignments to determine variants. If you supply a genbank file as the reference sequence, the program will also annnotate the variants, i.e. call synonymous, non-synonymous, or frameshift.
 
-> <img src="../images/warn.png" width="25" /> NOTE: On MacOS, the conda version of snippy is broken. To install manually if you have [HomeBrew](../part_1/1A_computer_preparation.md#step-3---mac-only-install-xcode-command-line-tools-and-homebrew): 
-> 
-> ```Shell
-> brew install brewsci/bio/snippy
-> brew install brewsci/bio/vt
-> ```
-> 
-> If you don't have HomeBrew:
-> 
-> ```Shell
-> git clone https://github.com/tseemann/snippy.git $HOME/snippy
-> echo "export PATH=$HOME/snippy/bin:\$PATH" >> ~/.bashrc
-> source ~/.bashrc
-> snippy --check
-> 
-> ``` 
-> 
-> Then install the rest of items needed in the conda environment:
-> 
-> ```Shell
-> conda create -n alignment ivar
-> ``` 
->
-> 
-
 **Commands**
 
 ```Shell
